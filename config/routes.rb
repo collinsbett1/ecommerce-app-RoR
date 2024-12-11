@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
-<<<<<<< HEAD
-    resources :products
-=======
     resources :orders
   end
   namespace :admin do    
     resources :products do
       resources :stocks
     end
->>>>>>> recovery-branch
     resources :categories
   end
   devise_for :admins
@@ -24,15 +20,6 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-<<<<<<< HEAD
-root "home#index"
-
-authenticated :admin_user do
-  root to: "admin#index", as: :admin_root
-end
-
-get "admin" => "admin#index"
-=======
   root "home#index"
 
   authenticated :admin_user do
@@ -40,6 +27,5 @@ get "admin" => "admin#index"
   end
 
   get "admin" => "admin#index"
->>>>>>> recovery-branch
 
 end
