@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[8.0].define(version: 2024_11_12_144710) do
+=======
+ActiveRecord::Schema[8.0].define(version: 2024_12_10_161839) do
+>>>>>>> recovery-branch
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -69,6 +73,18 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_12_144710) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "orders", force: :cascade do |t|
+    t.string "customer_email"
+    t.boolean "fulfilled"
+    t.integer "total"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> recovery-branch
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -80,6 +96,18 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_12_144710) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "stocks", force: :cascade do |t|
+    t.string "size"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_stocks_on_product_id"
+  end
+
+>>>>>>> recovery-branch
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "admin_products", "categories"
