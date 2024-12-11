@@ -22,8 +22,6 @@
   </div>
 
   <div class="my-5">
-<<<<<<< HEAD
-=======
   <% if admin_product.images.any? %>
     <% admin_product.images.each do |image| %>
       <%= image_tag image, class: "w-20 h-20 object-cover rounded-md" %>
@@ -35,18 +33,13 @@
 </div>
 
   <div class="my-5">
->>>>>>> recovery-branch
     <%= form.label :price %>
     <%= form.number_field :price, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
     <%= form.label :category_id %>
-<<<<<<< HEAD
-    <%= form.text_field :category_id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
-=======
     <%= form.collection_select :category_id, Category.order(:name), :id, :name, id: "Category", class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
->>>>>>> recovery-branch
   </div>
 
   <div class="my-5">
@@ -54,15 +47,12 @@
     <%= form.checkbox :active, class: "block mt-2 h-5 w-5" %>
   </div>
 
-<<<<<<< HEAD
-=======
   <% unless admin_product.new_record? %>
     <div class="my-5">
       <%= link_to "Product Stock", admin_product_stocks_path(admin_product), class: "underline" %>
     </div>
   <% end %>
 
->>>>>>> recovery-branch
   <div class="inline">
     <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
   </div>
