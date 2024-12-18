@@ -21,6 +21,7 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'tailwind', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/chart.js' %>
 
@@ -32,5 +33,6 @@
     <main class="container mx-auto mt-28 max-w-7xl px-2 sm:px-6 lg:px-8">
       <%= yield %>
     </main>
+    <%= render "shared/footer" %>
   </body>
 </html>

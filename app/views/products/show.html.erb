@@ -1,0 +1,29 @@
+<h1> Product Show Page </h1>
+
+<div class="flex justify-center gap-20 py-10">
+  <div class="flex flex-wrap max-w-lg">
+    <% @products.images.each do |image| %>
+        <%= image_tag image, class: "w-auto h-64" %>
+    <% end %>
+  </div>
+
+  <div class="flex flex-col items-start max-w-xm">
+    <h1 class="font-bold text-4xl uppercase"><%= @products.name %></h1>
+    <p class="text-2xl mt-4"><%= (@products.price).to_s %>
+    <p class="text-md py-8"><%= @products.description %></p>
+    <div class="my-8">
+      <p class="uppercase text-lg">Size</p>
+      <% @products.stocks.each do |stock| %>
+        <% if stock.amount > 0 %>
+          <button value="<%= stock.size %>" class="bg-gray-200 text-gray-800 font-semibold py-2 px-2 rounded hover:bg-gray-300 focus.ring-opacity-50">
+            <%= stock.size %>
+          </button>
+
+        <% else %>
+         
+        <% end %>
+      <% end %>
+  </div>
+
+</div>
+

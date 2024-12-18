@@ -40,7 +40,7 @@
             - John Doe
           </p>
         </div>
-        
+
         <div class="bg-gray-100 rounded shadow py-4 px-4">
           <p class="text-gray-800 text-base mb-4">
             "I've been shopping on Kykapu for years, and it's always  been a great Experience"
@@ -53,3 +53,14 @@
     </div>
   </div>
 </div>
+
+<div class="bg-gray-500 text-white my-10 text-center py-20">
+  <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+  <p  class="mb-8">Subscribe to our newsletterfor the latest updates and offers.</p>
+  <%= form_with url: root_path, method: :post, local: true, class: "flex justify-center" do %>
+    <%= email_field_tag :email, nil, placeholder: "Enter your email", class: "p-2 rounded-1 text-gray-800" %>
+    <%= submit_tag "Subscribe", class: "bg-gray-700 hover:bg-gray-800 cursor-pointer text-white font-bold py-2 px-4 rounded-r" %>
+  <% end %>
+</div>
+
+
